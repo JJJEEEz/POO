@@ -1,0 +1,4 @@
+    # ¿Que es self? Es una referencia al mismo objeto
+    # ¿Que es el metodo init? Constructor que inicializa los atribiutos de un objeto
+    # ¿Porque se usa doble guion bajo? Dunder. Porque es metodo mágico
+    # ¿Cuando se ejecuta el metodo init? Autom. al crear una nueva instancia, objeto
