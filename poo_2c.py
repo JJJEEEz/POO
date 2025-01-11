@@ -30,19 +30,28 @@ class Personaje:
     def morir(self):
         self.vida = 0
         print(self.nombre, "ha muerto")
-    
+
     def dañar(self, enemigo):
-        return self.fuerza - enemigo.defensa
-    
+        daño = self.fuerza - enemigo.defensa
+        if daño > 0:
+            return daño
+        else:
+            return 0
+
     def atacar(self, enemigo):
         daño = self.dañar(enemigo)
         enemigo.vida = enemigo.vida - daño
-        print(self.nombre, "ah realizado", daño, "puntos de daño a", enemigo.nombre)
-        print("vida de", enemigo.nombre, "es", enemigo.vida)
 
-#Variable del constructor vacio
-mi_personaje = Personaje("EstebanDido", 100, 50, 45, 100)
-mi_enemigo = Personaje("Angel", 70, 100, 40, 100)
+        if 0 >= enemigo.vida:
+            enemigo.morir()
+
+        else:
+            print(self.nombre, "ah realizado", daño, "puntos de daño a", enemigo.nombre)
+            print("vida de", enemigo.nombre, "es", enemigo.vida)
+
+#Variable del constructor (nombre, fuerza, inteligencia, defensa, vida)
+mi_personaje = Personaje("EstebanDido", 40, 50, 45, 100)
+mi_enemigo = Personaje("Angel", 70, 100, 70, 100)
 mi_personaje.imprimir_atributos()
 mi_personaje.atacar(mi_enemigo)
 # mi_personaje.morir()
