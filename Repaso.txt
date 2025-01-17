@@ -2,3 +2,9 @@
     # ¿Que es el metodo init? Constructor que inicializa los atribiutos de un objeto
     # ¿Porque se usa doble guion bajo? Dunder. Porque es metodo mágico
     # ¿Cuando se ejecuta el metodo init? Autom. al crear una nueva instancia, objeto
+Polimorfismo:
+    El mismo metodo puede tener un comprortamiento diferente dependiendo del objeto que lo llame
+diferencia entre 1 y 2 = en python
+    1 es asignacion, 2 es comparacion
+¿La herencia multiple existe?
+    SI
